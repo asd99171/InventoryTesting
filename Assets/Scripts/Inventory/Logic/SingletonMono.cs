@@ -31,6 +31,7 @@ namespace Inventory.Logic
                         if (_instance == null)
                         {
                             var go = new GameObject($"[{typeof(T).Name}]");
+                            go.hideFlags = HideFlags.DontSaveInEditor;
                             _instance = go.AddComponent<T>();
                         }
                     }
